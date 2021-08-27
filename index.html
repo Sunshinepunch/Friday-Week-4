@@ -14,7 +14,6 @@
     <h4>Select an Option Below to Being Ordering:</h4>
     <br>
     <form id="pizza-order">
-      <form id="pizza-size">
         <div class="size">
           <h2><label for="size">What Size?</label></h2>
           <br>
@@ -43,34 +42,33 @@
             Supernova (Extra Large)
           </label>
         </div>
-      </form>
       <br>
       <p>Please Select Your First Topping</p>
-      <select id="first_topping" name="first_topping">
-        <option value="1">Pepperoni</option>
-        <option value="2">Bacon</option>
-        <option value="3">Vegee-tables ©</option>
-        <option value="4">Mystery Meat</option>
-        <option value="5">None</option>
+      <select id="first">
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Vegee-tables">Vegee-tables ©</option>
+        <option value="Mystery Meat">Mystery Meat</option>
+        <option value="None">None</option>
       </select>
       <p>Please Select Your Second Topping</p>
-      <select id="second_topping" name="second_topping">
-        <option value="6">Pepperoni</option>
-        <option value="7">Bacon</option>
-        <option value="8">Vegee-tables ©</option>
-        <option value="9">Mystery Meat</option>
-        <option value="10">None</option>
+      <select id="second">
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Vegee-tables">Vegee-tables ©</option>
+        <option value="Mystery Meat">Mystery Meat</option>
+        <option value="None">None</option>
       </select>
       <p>Please Select Your Third Topping</p>
-      <select id="third_topping" name="third_topping">
-        <option value="10">Pepperoni</option>
-        <option value="11">Bacon</option>
-        <option value="12">Vegee-tables ©</option>
-        <option value="13">Mystery Meat</option>
-        <option value="14">None</option>
+      <select id="third">
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Vegee-tables">Vegee-tables ©</option>
+        <option value="Mystery Meat">Mystery Meat</option>
+        <option value="None">None</option>
       </select>
       <div id="footer">
-        <button type="submit" class="btn-success">Calculate your pizza price: </button>
+        <button type="submit" onclick="myFunction()" class="btn-success">Calculate your pizza price: </button>
       </div>
       </div>
     </form>
