@@ -11,11 +11,12 @@
   <div class="container">
     <h1>Welcome to Sunny Pie Up Pizza!</h1>
     <hr>
-    <h2>Select an Option Below to Being Ordering:</h2>
+    <h4>Select an Option Below to Being Ordering:</h4>
+    <br>
     <form id="pizza-order">
       <form id="pizza-size">
         <div class="size">
-          <label for="size">What Size?</label>
+          <h2><label for="size">What Size?</label></h2>
           <br>
           <input type="radio" name="size" value="1" checked>
           Candle (Personal)
@@ -44,37 +45,39 @@
         </div>
       </form>
       <br>
-      <br>
       <p>Please Select Your First Topping</p>
       <select id="first_topping" name="first_topping">
         <option value="1">Pepperoni</option>
         <option value="2">Bacon</option>
         <option value="3">Vegee-tables ©</option>
         <option value="4">Mystery Meat</option>
+        <option value="5">None</option>
       </select>
       <p>Please Select Your Second Topping</p>
       <select id="second_topping" name="second_topping">
-        <option value="5">Pepperoni</option>
-        <option value="6">Bacon</option>
-        <option value="7">Vegee-tables ©</option>
-        <option value="8">Mystery Meat</option>
+        <option value="6">Pepperoni</option>
+        <option value="7">Bacon</option>
+        <option value="8">Vegee-tables ©</option>
+        <option value="9">Mystery Meat</option>
+        <option value="10">None</option>
       </select>
       <p>Please Select Your Third Topping</p>
       <select id="third_topping" name="third_topping">
-        <option value="9">Pepperoni</option>
-        <option value="10">Bacon</option>
-        <option value="11">Vegee-tables ©</option>
-        <option value="12">Mystery Meat</option>
+        <option value="10">Pepperoni</option>
+        <option value="11">Bacon</option>
+        <option value="12">Vegee-tables ©</option>
+        <option value="13">Mystery Meat</option>
+        <option value="14">None</option>
       </select>
       <div id="footer">
         <button type="submit" class="btn-success">Calculate your pizza price: </button>
       </div>
-        <hr>
       </div>
     </form>
-    <div id="finalPizzaPrice">
-    </div>
   </div>
+    <div id="finalPizzaPrice">
+      <h1 id="p1">Your Total</h1>
+    </div>
 </body>
 
 </html>

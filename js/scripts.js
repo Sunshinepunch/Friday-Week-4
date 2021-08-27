@@ -1,3 +1,6 @@
+//Business Logic
+let cost = 0;
+
 function Pizza() {
   this.toppings = [];
   this.size = "";
@@ -7,6 +10,27 @@ Pizza.prototype.addTopping = function(topping) {
   this.toppings.push(topping)
 }
 
+Pizza.prototype.findCost = function () {
+  if(this.size == "Candle") {
+    cost += 8;
+  } else if (this.size == "Streetlight") {
+    cost += 10;
+  } else if (this.size == "Sunny") {
+    cost += 12;
+  } else if (this.size == "Supernova") {
+    cost += 16;
+  }
+  if(this.toppings.includes("Pepperoni") && this.toppings.includes("Bacon")) {
+    cost += 4;
+  } else if (this.toppings.includes("Pepperoni") || this.toppings.includes("Bacon")) {
+    cost += 2;
+  } else if (this.toppings.includes("Vegee-tables") || this.toppings.includes("Mystery Meat")) {
+    cost += 1;
+  } else {
+    cost += 0;
+  }
+  return cost;
+}
 
 
 
@@ -30,7 +54,6 @@ $(document).ready(function() {
   });
   $('#pizza-size').submit(function() {
     let size = parseInt($("input:radio[name=size]").val());
-
     if (size == 1){
       newPizza.size = "Candle";
     } else if (size == 2) {
