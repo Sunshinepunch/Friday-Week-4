@@ -1,23 +1,47 @@
+function Pizza() {
+  this.toppings = [];
+  this.size = 0;
+}
+
+Pizza.prototype.addTopping = function(topping) {
+  this.toppings 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//UI Logic
+
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    let i;
+    for ( i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 $(document).ready(function() {
-  $("#favoriteThings").submit(function(event) {
+  $("form#pizza-order").submit(function (event) {
     event.preventDefault();
-    const animal = $("input#animal").val();
-    const color = $("input#color").val();
-    const movie = $("input#movie").val();
-    const superhero = $("input#superhero").val();
-    
-    let favoriteThings = [animal, color, movie, superhero];
-    console.log(favoriteThings);
-    console.log(favoriteThings[0], favoriteThings[1], favoriteThings[2]);
-    let newFavoriteThings = [];
-    newFavoriteThings.push(favoriteThings[0], favoriteThings[1], favoriteThings[2]);
-    console.log("newFavoriteThings = " + newFavoriteThings);
-
-
-    $(".animaloutput").text(favoriteThings[0]);
-    $(".coloroutput").text(favoriteThings[1]);
-    $(".movieoutput").text(favoriteThings[2]);
-
-    $("#result").show();
   });
 });

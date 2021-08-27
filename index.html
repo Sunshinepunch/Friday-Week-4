@@ -5,10 +5,77 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title></title>
+  <title>Pizza Parlor</title>
 </head>
 <body>
   <div class="container">
+    <h1>Welcome to Sunny Pie Up Pizza!</h1>
+    <hr>
+    <h2>Select an Option Below to Being Ordering:</h2>
+    <form id="pizza-order">
+      <div class="size">
+        <label for="size">What is your age?</label>
+        <br>
+        <input type="radio" name="size" value="1" checked>
+        Candle (Personal)
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="2" checked>
+          Lamp (Medium)
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="3" checked>
+          Sunny (Large)
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="3" checked>
+          Supernova (Extra Large)
+        </label>
+      </div>
+      <br>
+      <br>
+      <p>Please Select Your First Topping</p>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Toppings</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#pepperoni">Pepperoni</a>
+          <a href="#bacon">Bacon</a>
+          <a href="#mysterymeat">Mystery Meat</a>
+        </div>
+      </div>
+      <p>Please Select Your Second Topping</p>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Toppings</button>
+        <div id="myDropdown2" class="dropdown-content">
+          <a href="#pepperoni">Pepperoni</a>
+          <a href="#bacon">Bacon</a>
+          <a href="#mysterymeat">Mystery Meat</a>
+        </div>
+      </div>
+      <p>Please Select Your Third Topping</p>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Toppings</button>
+        <div id="myDropdown3" class="dropdown-content">
+          <a href="#pepperoni">Pepperoni</a>
+          <a href="#bacon">Bacon</a>
+          <a href="#mysterymeat">Mystery Meat</a>
+        </div>
+      </div>
+      <div id="footer">
+        <button type="submit" class="btn-success">Calculate your pizza price: </button>
+      </div>
+        <hr>
+      </div>
+    </form>
+    <div id="finalPizzaPrice">
+    </div>
   </div>
 </body>
+
 </html>
