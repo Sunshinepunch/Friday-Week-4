@@ -6,9 +6,7 @@ function Pizza() {
   this.size = "";
 }
 
-Pizza.prototype.addTopping = function(topping) {
-  this.toppings.push(topping)
-}
+
 
 Pizza.prototype.findCost = function () {
   if(this.size == "Candle") {
@@ -52,10 +50,11 @@ function myFunction() {
   let toppingOne = document.getElementById("first").value;
   let toppingTwo = document.getElementById("second").value;
   let toppingThree = document.getElementById("third").value;
+  let pizzaSize = document.getElementById("pizza-size").value;
   newPizza.toppings.push(toppingOne);
   newPizza.toppings.push(toppingTwo);
   newPizza.toppings.push(toppingThree);
-  
+  newPizza.size = pizzaSize;
   console.log(newPizza.toppings);
 }
 
@@ -75,6 +74,7 @@ $(document).ready(function() {
     } else {
       newPizza.size = "Supernova";
     }
+    $("#finalPizzaPrice").text(newPizza.findCost());
     console.log(newPizza)
   });
 });
