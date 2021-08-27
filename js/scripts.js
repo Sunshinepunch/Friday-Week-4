@@ -1,6 +1,6 @@
 function Pizza() {
   this.toppings = [];
-  this.size = 0;
+  this.size = "";
 }
 
 Pizza.prototype.addTopping = function(topping) {
@@ -22,12 +22,23 @@ Pizza.prototype.addTopping = function(topping) {
 
 
 //UI Logic
-
+let newPizza = new Pizza ([], "");
 $(document).ready(function() {
   $("form#pizza-order").submit(function (event) {
     event.preventDefault();
+
   });
-  $('#submit').click(function() {
-    $("#first_topping").val();
+  $('#pizza-size').submit(function() {
+    let size = parseInt($("input:radio[name=size]").val());
+
+    if (size == 1){
+      newPizza.size = "Candle";
+    } else if (size == 2) {
+      newPizza.size = "Streetlight";
+    } else if (size == 3) {
+      newPizza.size = "Sunny";
+    } else {
+      newPizza.size = "Supernova";
+    }
   })
 });
