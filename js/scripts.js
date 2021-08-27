@@ -31,22 +31,10 @@ Pizza.prototype.findCost = function () {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //UI Logic
 
 
-function myFunction() {
+function makePizza() {
   let toppingOne = document.getElementById("first").value;
   let toppingTwo = document.getElementById("second").value;
   let toppingThree = document.getElementById("third").value;
@@ -55,7 +43,6 @@ function myFunction() {
   newPizza.toppings.push(toppingTwo);
   newPizza.toppings.push(toppingThree);
   newPizza.size = pizzaSize;
-  console.log(newPizza.toppings);
 }
 
 
@@ -74,7 +61,6 @@ $(document).ready(function() {
     } else {
       newPizza.size = "Supernova";
     }
-    $("#finalPizzaPrice").text(newPizza.findCost());
-    console.log(newPizza)
+    $("#finalCost").text(newPizza.findCost());
   });
 });
