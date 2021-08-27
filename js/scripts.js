@@ -27,7 +27,7 @@ Pizza.prototype.findCost = function () {
   } else {
     cost += 0;
   }
-  return cost;
+  return "$" + cost;
 }
 
 
@@ -46,7 +46,7 @@ function makePizza() {
 }
 
 
-
+let orderSize = 0
 let newPizza = new Pizza ([], "");
 $(document).ready(function() {
   $("form#pizza-order").submit(function (event) {
@@ -61,6 +61,8 @@ $(document).ready(function() {
     } else {
       newPizza.size = "Supernova";
     }
+    orderSize += 1;
     $("#finalCost").text(newPizza.findCost());
+    $("#numOfPizzas").text("Current Order Size: "+ orderSize);
   });
 });
