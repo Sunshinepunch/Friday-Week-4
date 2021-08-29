@@ -62,7 +62,9 @@ $(document).ready(function() {
       newPizza.size = "Supernova";
     }
     orderSize += 1;
+    $("#hungry").show();
     $("#finalCost").text(newPizza.findCost());
     $("#numOfPizzas").text("Current Order Size: "+ orderSize);
+    $("#orderSize").text(orderSize);
   });
 });

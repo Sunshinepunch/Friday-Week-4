@@ -14,9 +14,9 @@
   border: 3px solid green;
 } 
 
-.p1 {
+/* .p1 {
   text-decoration: underline;
-}
+} */
 
 #finalCost {
   font-size: 32px;
@@ -30,5 +30,13 @@
     width: 200px;
     height: 200px;
     border: 3px solid green;
+}
 
+#numOfPizzas {
+  font-size: large;
+  font-weight: bold;
+}
+
+#hungry {
+  display:none;
 }

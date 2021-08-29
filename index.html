@@ -15,7 +15,7 @@
     <br>
     <form id="pizza-order">
         <div class="size">
-          <h2><label for="size">What Size?</label></h2>
+          <h3><label for="size">What Size?</label></h3>
           <br>
           <select id="pizza-size">
             <option value="Candle">Candle (Personal)</option>
@@ -49,6 +49,10 @@
         <option value="Mystery Meat">Mystery Meat</option>
         <option value="Pepperoni">Pepperoni</option>
       </select>
+      <br>
+      <br>
+      <br>
+      <h5 id="hungry"> Order Again? Select new options above to add!</h5>
       <div id="footer">
         <button type="submit" onclick="makePizza()" class="btn-success">Add selected pizza to your order: </button>
       </div>
@@ -56,11 +60,11 @@
     </form>
   </div>
       <div id="finalPizzaPrice">
-        <h1 class="p1">Your Total</h1>
+        <h1 class="p1">Your Total:</h1>
         <span id="finalCost"></span>
       </div>
       <div id="pizzaOrder">
-        <h1 class="p1"> Your Order</h1>
+        <h1 class="p1"> Your Order:</h1>
         <span id="numOfPizzas"></span>
       </div>
 </body>
