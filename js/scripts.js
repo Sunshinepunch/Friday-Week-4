@@ -8,21 +8,23 @@ function Pizza() {
 
 
 
+
+
 Pizza.prototype.findCost = function () {
   if(this.size == "Candle") {
-    cost += 8;
-  } else if (this.size == "Streetlight") {
     cost += 10;
-  } else if (this.size == "Sunny") {
+  } else if (this.size == "Streetlight") {
     cost += 12;
+  } else if (this.size == "Sunny") {
+    cost += 14;
   } else if (this.size == "Supernova") {
-    cost += 16;
+    cost += 18;
   }
-  if(this.toppings.includes("Pepperoni") && this.toppings.includes("Bacon")) {
+  if(this.toppings.includes("Pepperoni ") && this.toppings.includes("Bacon ")) {
     cost += 4;
-  } else if (this.toppings.includes("Pepperoni") || this.toppings.includes("Bacon")) {
+  } else if (this.toppings.includes("Pepperoni ") || this.toppings.includes("Bacon ")) {
     cost += 2;
-  } else if (this.toppings.includes("Vegee-tables") || this.toppings.includes("Mystery Meat")) {
+  } else if (this.toppings.includes("Vegee-tables ") || this.toppings.includes("Mystery Meat ")) {
     cost += 1;
   } else {
     cost += 0;
@@ -31,7 +33,12 @@ Pizza.prototype.findCost = function () {
 }
 
 
+
 //UI Logic
+
+
+
+
 
 
 function makePizza() {
@@ -51,7 +58,7 @@ let newPizza = new Pizza ([], "");
 $(document).ready(function() {
   $("form#pizza-order").submit(function (event) {
     event.preventDefault();
-    let size = parseInt($("input:radio[name=size]").val());
+    let size = parseInt(document.getElementById("pizza-size").value);
     if (size === 1){
       newPizza.size = "Candle";
     } else if (size === 2) {
@@ -64,7 +71,8 @@ $(document).ready(function() {
     orderSize += 1;
     $("#hungry").show();
     $("#finalCost").text(newPizza.findCost());
-    $("#numOfPizzas").text("Current Order Size: "+ orderSize);
+    $("#numOfPizzas").text("Current Order Size: "+ orderSize + " pizzas");
     $("#orderSize").text(orderSize);
+    showToppings(newPizza);
   });
 });

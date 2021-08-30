@@ -1,4 +1,14 @@
+body {
+  background-image: url('../img/pizza\ sun.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-color: darksalmon;
+}
 
+img.resize {
+  width:540px; /* you can use % */
+  height: auto;
+}
 
 #footer {
   position:relative;
@@ -40,3 +50,4 @@
 #hungry {
   display:none;
 }
+
